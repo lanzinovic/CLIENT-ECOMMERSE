@@ -1,9 +1,11 @@
 import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
   display: flex;
+  ${mobile({flexDirection : "Column" })}
 `
 const Left = styled.div`
   flex: 1;
@@ -35,6 +37,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -54,6 +57,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({backgroundColor : "#fff8f8" })}
 `
 const ContactItem = styled.div`
   margin-bottom: 20px;
@@ -68,7 +72,7 @@ export default function Footer() {
   return (
     <Container>
       <Left>
-        <Logo>STARBOY</Logo>
+        <Logo>STARBOY DESIGNS</Logo>
         <Desc>Indulge in effortless style with our latest collection. Crafted from premium fabrics, each piece is designed to elevate your wardrobe. From chic tops to versatile bottoms, our collection offers a range of timeless pieces that are perfect for any occasion.
         </Desc>
         <SocialContainer>
